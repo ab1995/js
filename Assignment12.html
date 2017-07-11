@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Word: <input type="text" id="enteredLetter" ><br><br>
+<button onclick="checkPalindrome()">Check Pallindrome</button>
+ <p id="searchResult"></p>
+<script>
+	function checkPalindrome() {
+		var sentence = document.getElementById("enteredLetter").value;
+		var flag=true;
+		var result="";
+		for(itr=0;itr<sentence.length;itr++)
+		{
+			if(sentence[itr].toUpperCase()!=sentence[sentence.length-itr-1].toUpperCase())
+			{
+				flag=false;
+				break;
+			}
+			
+		}
+		
+		if(flag)
+			document.getElementById("searchResult").innerHTML ="Pallindrome";
+		else
+			document.getElementById("searchResult").innerHTML ="Not Pallindrome";
+	}
+</script>
+
+</body>
+</html>

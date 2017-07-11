@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Number_1: <input type="text" id="num1" ><br><br>
+Number_2: <input type="text" id="num2" ><br><br>
+<button onclick="divide()">Divide</button><br>
+ <p id="quotient"></p>
+
+<script>
+	function divide() {
+		var num1 = document.getElementById("num1").value;
+		var num2 = document.getElementById("num2").value;
+		
+		if(num2==0)
+		{
+			document.getElementById("quotient").innerHTML = "Divide by Zero Exception";
+			alert("Warning! Second Number is Zero.")
+		}
+		else
+		{
+			document.getElementById("quotient").innerHTML = (num1/num2);
+		}
+	}
+</script>
+
+</body>
+</html>

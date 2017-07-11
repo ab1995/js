@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Number_1: <input type="text" id="num1" ><br><br>
+<button onclick="calFactorial()">Calculate Factorial</button><br>
+ <p id="factorialNumber"></p>
+
+<script>
+	function calFactorial() {
+		var num1 = document.getElementById("num1").value;
+		var result=1;
+		
+		for(itr=num1; itr>1; itr--)
+		{
+			result*=itr;
+		}
+		
+
+		document.getElementById("factorialNumber").innerHTML = "Factorial of "+num1+" = "+result;
+	}
+</script>
+
+</body>
+</html>

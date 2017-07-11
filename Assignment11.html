@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Letter: <input type="text" id="enteredLetter" ><br><br>
+<button onclick="figureVowel()">Check for Vowel</button>
+ <p id="searchResult"></p>
+<script>
+	function figureVowel() {
+		var sentence = document.getElementById("enteredLetter").value;
+		var flag=false;
+		var result="";
+		for(itr=0;itr<sentence.length;itr++)
+		{
+			if(sentence[itr]=="a"|| sentence[itr]=="e" || sentence[itr]=="i" || sentence[itr]=="o" ||sentence[itr]=="u")
+			{
+				result+=" Vowel "+sentence[itr]+" at position "+(itr+1)+" <br>";
+				flag=true;
+			}
+			
+		}
+		
+		if(flag)
+			document.getElementById("searchResult").innerHTML =result;
+		else
+			document.getElementById("searchResult").innerHTML ="No vowel found in a given sentence.";
+	}
+</script>
+
+</body>
+</html>

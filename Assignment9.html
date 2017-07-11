@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Number: <input type="text" id="enteredNumber" ><br><br>
+<button onclick="addNumber()">Add</button>&nbsp&nbsp&nbsp&nbsp
+<button onclick="cal()">Calculate</button>
+ <p id="result"></p>
+<script>
+	var numbers=[]
+	function addNumber() {
+		numbers.push(parseInt(document.getElementById("enteredNumber").value));
+		document.getElementById("enteredNumber").value="";
+	}
+	
+	function cal() {
+		var total=0, max=-999999;min=999999;
+		
+		for(itr=0;itr<numbers.length;itr++)
+		{
+			total+=numbers[itr];
+			
+			if(numbers[itr]>max)
+				max=numbers[itr];
+			if(numbers[itr]<min)
+				min=numbers[itr];
+		}
+		
+		document.getElementById("result").innerHTML = "Total = "+total+" Mean = "+(total/numbers.length)+" Max: "+max+" Min: "+min;
+		
+	}
+</script>
+
+</body>
+</html>

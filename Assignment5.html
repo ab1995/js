@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Number: <input type="text" id="num" ><br><br>
+<button onclick="cal()">Calculate Table</button><br>
+ <p id="table"></p>
+<script>
+	function cal() {
+		var num = document.getElementById("num").value;
+		var result="";
+		var flag=false;
+		for(itr=1;itr<=10;itr++)
+		{
+			result+=("<br>"+num+" * "+itr+" = "+(itr*num));
+		}
+		document.getElementById("table").innerHTML = result;
+		
+		var v = prompt("yes or no")
+		if(v==0){
+			
+		}
+		else{
+			location.reload();
+		}
+		
+		
+	}
+
+	
+</script>
+
+</body>
+</html>

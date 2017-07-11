@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Number_1: <input type="text" id="num1" ><br><br>
+<button onclick="calPrime()">Check Prime</button><br>
+ <p id="primeNumber"></p>
+
+<script>
+	function calPrime() {
+		var num1 = document.getElementById("num1").value;
+		var flag=true;
+		
+		for(div=num1-1; div>1; div--)
+		{
+			if((num1%div)==0)
+			{
+				document.getElementById("primeNumber").innerHTML = num1+" is NOT a Prime Number";
+				flag=false;
+				break;
+			}
+		}
+		
+		if(flag)
+			document.getElementById("primeNumber").innerHTML = num1+" is a Prime Number";
+	}
+</script>
+
+</body>
+</html>

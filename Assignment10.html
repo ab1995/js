@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Number: <input type="text" id="enteredNumber" ><br><br>
+<button onclick="addNumber()">Add</button>&nbsp&nbsp&nbsp&nbsp
+<button onclick="sortAsc()">Ascending Sort</button>&nbsp&nbsp&nbsp&nbsp
+<button onclick="sortDsc()">Descending Sort</button>
+ <p id="result"></p>
+<script>
+	var numbers=[]
+	function addNumber() {
+		numbers.push(parseInt(document.getElementById("enteredNumber").value));
+		document.getElementById("enteredNumber").value="";
+		numbers.sort();
+	}
+	
+	function sortAsc() {
+		var sortedArray="";
+		for(itr=0;itr<numbers.length;itr++)
+		{
+			sortedArray+=" "+numbers[itr];
+		}
+		document.getElementById("result").innerHTML =sortedArray;
+	}
+	
+		function sortDsc() {
+		var sortedArray="";
+		numbers.reverse();
+		for(itr=0;itr<numbers.length;itr++)
+		{
+			sortedArray+=" "+numbers[itr];
+		}
+		document.getElementById("result").innerHTML =sortedArray;
+	}
+</script>
+
+</body>
+</html>

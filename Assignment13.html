@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Word: <input type="text" id="enteredLetter" ><br><br>
+<button onclick="verifyEmail()">Verify EmailID</button>
+ <p id="searchResult"></p>
+<script>
+	function verifyEmail() {
+	
+		var sentence = document.getElementById("enteredLetter").value;
+		var flag=true;
+		var result="";
+	
+		var pattern = "/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/";		
+		 
+		 alert(sentence.match(pattern)); 
+  
+
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Letter: <input type="text" id="enteredLetter" ><br><br>
+<button onclick="figureVowel()">Check for Vowel</button>
+ <p id="result"></p>
+<script>
+	function figureVowel() {
+		var letter = document.getElementById("enteredLetter").value;
+		if(letter=="a"|| letter=="e" || letter=="i" || letter=="o" ||letter=="u")
+			document.getElementById("result").innerHTML = letter+" is a vowel.";
+		else
+			document.getElementById("result").innerHTML = letter+" is NOT a vowel.";
+	}
+</script>
+
+</body>
+</html>

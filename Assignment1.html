@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Age: <input type="text" id="enteredAge" >
+<button onclick="calYear()">Calculate Year</button><br>
+ <p id="year"></p>
+
+<script>
+	function calYear() {
+		var age = document.getElementById("enteredAge").value;
+		var dateObj=new Date();
+		var currYear=dateObj.getFullYear();
+		document.getElementById("year").innerHTML = (currYear-age);
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Sentence: <input type="text" id="enteredSentence" ><br><br>
+<button onclick="cal()">Clear Spaces</button>
+ <p id="result"></p>
+<script>
+	var numbers=[]
+	function cal() {
+	
+		var sentence=document.getElementById("enteredSentence").value;
+		var newSentence = sentence.replace(/\s+/g,' ').trim();
+		document.getElementById("result").innerHTML =newSentence;
+	}
+	
+
+	
+</script>
+
+</body>
+</html>

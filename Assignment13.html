@@ -9,13 +9,28 @@ Word: <input type="text" id="enteredLetter" ><br><br>
 	function verifyEmail() {
 	
 		var sentence = document.getElementById("enteredLetter").value;
-		var flag=true;
 		var result="";
 	
-		var pattern = "/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/";		
-		 
-		 alert(sentence.match(pattern)); 
-  
+		var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;  
+		
+		if(mailformat.test(sentence)==true)
+		{
+			alert("Valid EmailID"); 
+		}
+		else
+		{
+			alert("Invalid EmailID"); 
+		}			
+		    
+		/*var atpos = sentence.indexOf("@");
+		var dotpos = sentence.lastIndexOf(".");
+		if (atpos<1 || dotpos<atpos+2 || dotpos+2>=sentence.length) {
+			alert("Not a valid e-mail address");
+		}
+		else
+		{
+			alert("Valid e-mail address");
+		}*/
 
 	}
 </script>

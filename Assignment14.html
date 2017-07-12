@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Sentence: <input type="text" id="enteredSentence" ><br><br>
+<button onclick="cal()">Count Characters</button>
+ <p id="result"></p>
+<script>
+	var numbers=[]
+	function cal() {
+		var charCounter={};
+		var result="";
+		var sentence=document.getElementById("enteredSentence").value;
+		
+		
+		
+		for(itr=0;itr<sentence.length;itr++)
+		{
+			if(charCounter[sentence[itr]]==undefined)
+				charCounter[sentence[itr]]=1;
+			else
+				charCounter[sentence[itr]]+=1;
+		}
+	
+		for(key in charCounter)
+		{
+			result+="<br>"+key+" = "+charCounter[key];
+		}
+		
+		
+		document.getElementById("result").innerHTML =result;
+	}
+	
+
+	
+</script>
+
+</body>
+</html>
